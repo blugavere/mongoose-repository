@@ -1,0 +1,16 @@
+version: '2'
+services:
+    app:
+        build: .
+        # depends_on:
+        #   - mongo
+        volumes:
+            - .:/app
+        command: npm test
+        environment:
+            - NODE_ENV=docker
+    mongo:
+        hostname: mongo
+        image: mongo:latest
+        ports:
+            - "27018:27017"
