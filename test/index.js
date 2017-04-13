@@ -1,9 +1,10 @@
 'use strict';
 
-const Repo = require('../lib/MongooseRepository');
 const mongoose = require('mongoose');
-mongoose.Promise = Promise;
+const Repo = require('../lib/MongooseRepository');
 const Assertions = require('../lib/test/Assertions');
+
+mongoose.Promise = Promise;
 
 const modelName = 'cats';
 const schema = new mongoose.Schema({
