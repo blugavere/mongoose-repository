@@ -9,6 +9,7 @@ services:
         command: npm test
         environment:
             - NODE_ENV=docker
+            - CI=true
     mongo:
         hostname: mongo
         image: mongo:latest
