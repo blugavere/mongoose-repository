@@ -36,8 +36,8 @@ gulp.task('pre-test', () => gulp.src([
   }))
   .pipe(istanbul.hookRequire()));
 
-gulp.task('test', ['pre-test'], () => {
-
+gulp.task('test', ['pre-test'], cb => {
+  let mochaErr;
   gulp.src([
     'lib/**/*.test.js',
     'test/**/*.js'
@@ -46,7 +46,13 @@ gulp.task('test', ['pre-test'], () => {
     .pipe(mocha({
       reporter: 'spec'
     }))
-    .pipe(istanbul.writeReports());
+    .on('error', err => {
+      mochaErr = err;
+    })
+    .pipe(istanbul.writeReports())
+    .on('end', () => {
+      cb(mochaErr);
+    });
 });
 
 gulp.task('watch', () => {

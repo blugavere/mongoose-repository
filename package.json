@@ -4,7 +4,7 @@
   "description": "Generic IRepository implementation for MongoDB using Mongoose",
   "homepage": "",
   "scripts": {
-    "docker": "docker-compose -f docker-compose.yml up",
+    "docker": "docker-compose -f docker-compose.yml up --abort-on-container-exit",
     "prepublish": "gulp prepublish",
     "test": "gulp",
     "lint": "./node_modules/.bin/eslint ./lib"

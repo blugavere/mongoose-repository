@@ -18,7 +18,7 @@ if (!mongoose.modelSchemas[modelName]) {
 }
 
 /**
- * NODE_ENV=test mocha --require babel-register test/mongoose.js --watch
+ * NODE_ENV=test mocha test/index.js --watch
  */
 let connStr = 'mongodb://localhost/test';
 if (process.env.NODE_ENV === 'docker') {
@@ -38,6 +38,10 @@ describe('Mongoose Repository', () => {
     mongoose.connection.close(() => {
       mongoose.connect(connStr);
     });
+  });
+
+  after(() => {
+    mongoose.connection.close();
   });
 
   describe('generic assertions', () => {
