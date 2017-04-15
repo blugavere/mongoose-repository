@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 const Repo = require('../lib');
-const Assertions = require('../lib/test/Assertions');
+const Assertions = require('./assertions');
 
 mongoose.Promise = Promise;
 
