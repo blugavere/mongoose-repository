@@ -1,7 +1,7 @@
 
 export class MongooseRepository {
     constructor(mongoose: any, modelName: any, ...args: any[]);
-    add(entity: any, cb: () => any): any;
+    add(entity: object, cb: () => any): any;
     clear(cb: () => any): void;
     disconnect(cb: () => any): void;
     findAll(cb: () => any): any;

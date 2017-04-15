@@ -1,4 +1,4 @@
-# Mongoose Repository 
+# Mongoose Repository
 [![NPM version][npm-image]][npm-url][![dependencies Status](https://david-dm.org/blugavere/mongoose-repository/status.svg)](https://david-dm.org/blugavere/mongoose-repository) [![Coverage Status](https://coveralls.io/repos/github/blugavere/mongoose-repository/badge.svg?branch=master)](https://coveralls.io/github/blugavere/mongoose-repository?branch=master)[![NPM Downloads](https://img.shields.io/npm/dm/mongoose-repository.svg?style=flat)](https://www.npmjs.com/package/mongoose-repository)[![Build Status](https://travis-ci.org/blugavere/mongoose-repository.svg?branch=master)](https://travis-ci.org/blugavere/mongoose-repository)[![Patreon](https://img.shields.io/badge/patreon-support%20the%20author-blue.svg)](https://www.patreon.com/blugavere)
 
 ## Installation 
@@ -10,7 +10,21 @@ $ npm install --save mongoose-repository
 ## Usage
 
 ```js
+
+'use strict'
+
+const mongoose = require('mongoose');
 const MongooseRepository = require('mongoose-repository');
+
+class CatRepository extends MongooseRepository {
+  constructor(mongoose, modelName) {
+    super(mongoose, modelName);
+  }
+}
+
+// or if you dont need custom functionality
+
+const repo = new MongooseRepository(mongoose, modelName);
 ```
 
 ## Getting Started
