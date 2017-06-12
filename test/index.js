@@ -3,6 +3,7 @@
 const mongoose = require('mongoose');
 const Repo = require('../lib');
 const Assertions = require('./assertions');
+const expect = require('expect');
 
 mongoose.Promise = Promise;
 
@@ -41,7 +42,7 @@ describe('Mongoose Repository', () => {
   });
 
   after(() => {
-    mongoose.connection.close();
+    repo.disconnect();
   });
 
   describe('generic assertions', () => {
@@ -54,6 +55,19 @@ describe('Mongoose Repository', () => {
     Assertions.assertions.forEach(x => {
       it(x.assertion, done => {
         x.method(repo, bag)(done);
+      });
+    });
+  });
+
+
+  describe('count', () => {
+    it('testing count method', done => {
+      expect(typeof repo.count).toExist();
+      expect(typeof repo.count).toBe('function');
+      repo.count((err, count) => {
+        expect(err).toNotExist();
+        expect(Number.isNaN(count)).toBe(false);
+        done();
       });
     });
   });
