@@ -46,7 +46,7 @@ module.exports = {
         'import/no-duplicates': 2,
         'import/no-deprecated': 2,
         'import/newline-after-import': 1,
-        'no-useless-return': 1,
+        // 'no-useless-return': 1,
         'quote-props': ["error", "as-needed"]
     },
     "env": {

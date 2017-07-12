@@ -9,7 +9,7 @@ const add = (repo, bag) => done => {
     expect(res).toExist();
     expect(res._id).toExist();
     bag.id = res._id;
-    console.log(repo.constructor.name, bag.id);
+    // console.log(repo.constructor.name, bag.id);
     expect(res.name).toBe(bag.client.name);
     done();
   });

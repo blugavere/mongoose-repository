@@ -1,5 +1,9 @@
 # Mongoose Repository
-[![NPM version][npm-image]][npm-url][![dependencies Status](https://david-dm.org/blugavere/mongoose-repository/status.svg)](https://david-dm.org/blugavere/mongoose-repository) [![Coverage Status](https://coveralls.io/repos/github/blugavere/mongoose-repository/badge.svg?branch=master)](https://coveralls.io/github/blugavere/mongoose-repository?branch=master)[![NPM Downloads](https://img.shields.io/npm/dm/mongoose-repository.svg?style=flat)](https://www.npmjs.com/package/mongoose-repository)[![Build Status](https://travis-ci.org/blugavere/mongoose-repository.svg?branch=master)](https://travis-ci.org/blugavere/mongoose-repository)[![Patreon](https://img.shields.io/badge/patreon-support%20the%20author-blue.svg)](https://www.patreon.com/blugavere)
+[![NPM version][npm-image]][npm-url]
+[![dependencies Status][daviddm-image]][daviddm-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
+[![NPM Downloads][downloads-url]][downloads-link]
+[![Build Status][travis-image]][travis-url]
 
 ## Installation 
 
@@ -75,3 +79,5 @@ MIT © [Ben Lugavere](http://benlugavere.com/)
 [daviddm-url]: https://david-dm.org/blugavere/mongoose-repository
 [coveralls-image]: https://coveralls.io/repos/blugavere/mongoose-repository/badge.svg
 [coveralls-url]: https://coveralls.io/r/blugavere/mongoose-repository
+[downloads-url]: https://img.shields.io/npm/dm/mongoose-repository.svg?style=flat
+[downloads-link]: https://www.npmjs.com/package/mongoose-repository
