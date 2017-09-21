@@ -14,7 +14,6 @@
     "email": "b.lugavere@gmail.com",
     "url": "http://benlugavere.com/#/"
   },
-  "contributors": [],
   "typings": "mongoose-repository.d.ts",
   "files": [
     "dist",
@@ -46,6 +45,7 @@
   "repository": "blugavere/mongoose-repository",
   "license": "MIT",
   "dependencies": {
-    "auto-bind": "^1.1.0"
+    "auto-bind": "^1.1.0",
+    "polygoat": "1.1.4"
   }
 }
