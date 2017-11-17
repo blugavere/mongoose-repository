@@ -5,6 +5,10 @@
 [![NPM Downloads][downloads-url]][downloads-link]
 [![Build Status][travis-image]][travis-url]
 
+
+
+# The Repositories Project has been consolidated into [https://github.com/blugavere/node-repositories](https://github.com/blugavere/node-repositories). This repository will no longer be maintained.
+
 ## Installation 
 
 ```sh
